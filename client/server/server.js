@@ -12,7 +12,11 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 app.get('/api/ares/:ico', async (req, res) => {
   const { ico } = req.params;
   try {
-    const response = await fetch(`https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/${ico}`);
+    const response = await fetch(`https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/${ico}`, {
+  headers: {
+    'User-Agent': 'Mozilla/5.0'
+  }
+});
     if (!response.ok) return res.status(404).json({ error: 'IČO nebylo nalezeno.' });
     const data = await response.json();
     res.json(data);
