@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generátor plné moci</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzip/3.1.5/pizzip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.31.5/docxtemplater.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Generátor plné moci</h1>
+  <label for="ico">Zadejte IČO:</label>
+  <input type="text" id="ico" placeholder="např. 27074358" />
+  <button onclick="handleSubmit()">Generovat dokumenty</button>
+  <p id="status"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
