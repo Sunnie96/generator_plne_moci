@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 app.get('/api/ares/:ico', async (req, res) => {
   const { ico } = req.params;
   try {
-    const response = await fetch(`https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/${ico}`);
+    const response = await fetch(`https://generator-plne-moci.onrender.com/api/ares/${ico}`);
     if (!response.ok) return res.status(404).json({ error: 'IČO nebylo nalezeno.' });
     const data = await response.json();
     res.json(data);
