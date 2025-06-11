@@ -6,7 +6,7 @@ async function handleSubmit() {
   status.innerText = 'Načítání údajů z ARES...';
 
   try {
-    const response = await fetch(`/api/ares/${ico}`);
+    const response = await fetch(`https://generator-plne-moci.onrender.com/api/ares/${ico}`);
     if (!response.ok) throw new Error('IČO nebylo nalezeno.');
 
     const data = await response.json();
